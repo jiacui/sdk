@@ -127,7 +127,7 @@ public class ByteBuffer {
             }
             if(key == "string") {
                 String val = (String) values.get(i);
-                System.arraycopy(ByteHelper.short2ByteArray((short) val.length()), 0, bytes, off, 2);
+                System.arraycopy(ByteHelper.short2ByteArray((short) val.getBytes().length), 0, bytes, off, 2);
                 off += 2;
 //                System.out.print(val.getBytes());
                 System.arraycopy(val.getBytes(), 0, bytes, off, val.getBytes().length);

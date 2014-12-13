@@ -40,7 +40,7 @@ public class IMClient {
                 }
             }
         };
-        connection = new Connection("120.24.63.197", 10101, stanzaListener);
+        connection = new Connection("localhost", 10101, stanzaListener);
         connection.setConnectionListener(connectionListener);
         connection.setStanzaListener(stanzaListener);
     }
