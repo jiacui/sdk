@@ -2,18 +2,14 @@ package im.net.core;
 
 import im.net.listener.ConnectionListener;
 import im.net.listener.StanzaListener;
-import im.net.stanza.Auth;
-import im.net.stanza.AuthResp;
-import im.net.stanza.Session;
+import im.net.stanza.*;
 import im.net.util.ByteHelper;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketAddress;
+import java.net.*;
 
 /**
  * Created by koujc on 14-12-7.
@@ -40,35 +36,7 @@ public class Connection implements Runnable{
     public Connection(String ip, int port, StanzaListener handler) {
         this.ip = ip;
         this.port = port;
-        this.connectionListener = connectionListener;
-        final Connection self = this;
-        this.parser = new Parser(new StanzaListener() {
-            @Override
-            public void onStanza(Stanza stanza) {
-                if(stanza.is("AuthResp")) {
-                    AuthResp authResp = new AuthResp(stanza);
-                    if (authResp.getCode() == 0) {
-                        self.bind();
-                    } else {
-                        //login error
-                        self.authenticateFail();
-                    }
-
-                }
-
-                if(stanza.is("Session")) {
-                    Session session = new Session(stanza);
-                    if (session.getStep() == 2) {
-                        self.onSession(session.getStamp());
-                    }
-                }
-//                if(stanza.getType() == 17)
-//                {
-//                    Message *message = [[Message alloc] initWithStanza:stanza];
-//                    self.receiveMessage:message];
-//                }
-            }
-        });
+//        this.connectionListener = connectionListener;
     }
 
     public void connect(int uid, String accessToken) {
@@ -76,7 +44,6 @@ public class Connection implements Runnable{
         this.accessToken = accessToken;
         new Thread(this).start();
         log.info("connect...");
-//                System.out.println("connect...");
     }
 
     public void bind() {
@@ -94,18 +61,48 @@ public class Connection implements Runnable{
     public void onSession(long stamp) {
         status = 2;
         this.parser.setStanzaListener(this.stanzaListener);
-        log.info("connected");
         this.connectionListener.connectionSuccessful();
+        log.info("connected");
     }
 
     public void send(Stanza stanza) {
         try {
             os.write(stanza.toBuffer());
         } catch (IOException e) {
-            e.printStackTrace();
+            if(e instanceof SocketException) {
+                this.reconnect();
+            } else {
+                e.printStackTrace();
+            }
         }
     }
 
+    public void disconnect() {
+        try {
+            os.write(new End().toBuffer());
+        } catch (IOException e) {
+        } finally {
+            try {
+                this.socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        log.info("disconnect...");
+    }
+
+    public void reconnect() {
+        if(this.socket != null) {
+            try {
+                this.socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        new Thread(this).start();
+        log.info("reconnect...");
+    }
 
     @Override
     public void run() {
@@ -127,11 +124,38 @@ public class Connection implements Runnable{
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            if(e instanceof ConnectException) {
+                this.reconnect();
+            } else if(e instanceof SocketException){
+                log.info(e.getMessage());
+            }
         }
     }
 
     private void startStream() {
+        final Connection self = this;
+        this.parser = new Parser(new StanzaListener() {
+            @Override
+            public void onStanza(Stanza stanza) {
+                if(stanza.is("AuthResp")) {
+                    AuthResp authResp = new AuthResp(stanza);
+                    if (authResp.getCode() == 0) {
+                        self.bind();
+                    } else {
+                        //login error
+                        self.authenticateFail();
+                    }
+                } else if(stanza.is("Session")) {
+                    Session session = new Session(stanza);
+                    if (session.getStep() == 2) {
+                        self.onSession(session.getStamp());
+                    }
+                } else {
+                    self.stanzaListener.onStanza(stanza);
+                }
+            }
+        });
+
         this.send(new Auth((byte)1, uid, (byte)1, accessToken, appVersion, osVersion));
     }
 

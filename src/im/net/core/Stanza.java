@@ -21,6 +21,7 @@ public class Stanza {
             case 0x0002:return type == "AuthResp";
             case 0x0003:return type == "Session";
             case 0x0011:return type == "Message";
+            case 0x0012:return type == "Receipt";
             case 0x0022:return type == "presence";
             case 0x0033:return type == "Ping";
             case 0x0034:return type == "Conflict";

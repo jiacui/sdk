@@ -14,10 +14,10 @@ public class Main {
 //        System.out.println(new ByteBuffer(b)._double()._int()._string().unpack().get(1));
 //        System.out.println(new ByteBuffer(b)._double()._int()._string().unpack().get(2));
 
-          System.out.println(System.currentTimeMillis());
+//          System.out.println(System.currentTimeMillis());
 
-        int uid = 102;
-        String accessToken = "MTAxADEwMQAxNjVCNkQ2QTU5QTJDNDY4QzU5MDdCNDBEREE5RkYzQmUzOWM";
+        int uid = 905579;
+        String accessToken = "f8bc80013616f4ea2ce5defe7e69252a";
 //        System.out.println(bytesToHexString(new Auth((byte) 1, uid, (byte) 1, accessToken, "im/1.0", "android/4.0").toBuffer()));
 //        System.out.println(bytesToHexString(new Auth((byte) 1, uid, (byte) 1, accessToken, "golo/3.1", "ios/7.1").toBuffer()));
 

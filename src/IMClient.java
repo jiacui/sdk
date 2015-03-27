@@ -4,6 +4,7 @@ import im.net.listener.ConnectionListener;
 import im.net.listener.StanzaListener;
 import im.net.stanza.Message;
 import im.net.stanza.Ping;
+import im.net.stanza.Receipt;
 import org.apache.log4j.Logger;
 
 import java.util.Scanner;
@@ -20,7 +21,6 @@ public class IMClient {
 
     private static final Logger log = Logger.getLogger(IMClient.class);
 
-
     private int uid;
     private boolean authenticate;
 
@@ -32,7 +32,16 @@ public class IMClient {
                 if(stanza.is("Message")) {
                     Message message = new Message(stanza);
                     log.info("receive msg:" + message.getBody() + " from " + message.getFrom());
-                    //TO DO
+
+                    // send receipt back
+                    IMClient.connection.send(new Receipt(message.getId()));
+
+                    // TO DO
+                }
+
+                if(stanza.is("Conflict")) {
+                    IMClient.disconnect();
+                    log.info("account conflict");
                 }
 
                 if(stanza.is("Ping")) {
@@ -40,7 +49,7 @@ public class IMClient {
                 }
             }
         };
-        connection = new Connection("120.24.63.197", 10101, stanzaListener);
+        connection = new Connection("192.168.81.123", 10111, stanzaListener);
         connection.setConnectionListener(connectionListener);
         connection.setStanzaListener(stanzaListener);
     }
@@ -73,11 +82,17 @@ public class IMClient {
                 }
             }.run();
 
-            System.out.println("输入消息内容:");
-            Scanner sc = new Scanner(System.in);
-
-            String msg = sc.next();
-            instance.sendChatMessage(102, msg);
+//            new Runnable(){
+//                @Override
+//                public void run() {
+//                    System.out.println("输入消息内容:");
+//                    Scanner sc = new Scanner(System.in);
+////                    while(true) {
+//                        String msg = sc.next();
+//                        instance.sendChatMessage(905579, msg);
+//                    }
+//                }
+//            }.run();
         }
 
         @Override
@@ -130,5 +145,9 @@ public class IMClient {
 
     public void ping() {
         connection.send(new Ping());
+    }
+
+    public static void disconnect() {
+        connection.disconnect();
     }
 }
