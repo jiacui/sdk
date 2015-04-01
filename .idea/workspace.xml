@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c358ca-7755-4aae-8f5d-2e20d0305b55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/im/net/stanza/End.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/im/net/stanza/Receipt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/Auth.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/Auth.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/AuthResp.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/AuthResp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/core/ByteBuffer.java" afterPath="$PROJECT_DIR$/src/im/net/core/ByteBuffer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/util/ByteHelper.java" afterPath="$PROJECT_DIR$/src/im/net/util/ByteHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/listener/Callback.java" afterPath="$PROJECT_DIR$/src/im/net/listener/Callback.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/core/Connection.java" afterPath="$PROJECT_DIR$/src/im/net/core/Connection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java" afterPath="$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/End.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/End.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IMClient.java" afterPath="$PROJECT_DIR$/src/IMClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/Message.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/core/Parser.java" afterPath="$PROJECT_DIR$/src/im/net/core/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/Ping.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/Ping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/Receipt.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/Receipt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/stanza/Session.java" afterPath="$PROJECT_DIR$/src/im/net/stanza/Session.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/core/Stanza.java" afterPath="$PROJECT_DIR$/src/im/net/core/Stanza.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/im/net/listener/StanzaListener.java" afterPath="$PROJECT_DIR$/src/im/net/listener/StanzaListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,19 +83,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IMClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IMClient.java">
+      <file leaf-file-name="Connection.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/im/net/core/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="33" selection-start="2593" selection-end="2790" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3726">
+            <state line="313" column="0" selection-start="9660" selection-end="9660" vertical-scroll-proportion="6.775" vertical-offset="3573" max-vertical-offset="9072">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3191#3692#0" expanded="true" />
+                <element signature="e#3681#3682#0" expanded="true" />
+                <element signature="e#5110#5261#0" expanded="true" />
+                <element signature="e#5250#5251#0" expanded="true" />
+                <element signature="e#6883#7956#0" expanded="true" />
+                <element signature="e#7945#7946#0" expanded="true" />
+                <element signature="e#9715#9716#0" expanded="true" />
+                <element signature="e#9756#9757#0" expanded="true" />
+                <element signature="e#9836#9837#0" expanded="true" />
+                <element signature="e#9896#9897#0" expanded="true" />
+                <element signature="e#10025#10026#0" expanded="true" />
+                <element signature="e#10059#10060#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthResp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/im/net/stanza/AuthResp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="7" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java">
+      <file leaf-file-name="IMClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IMClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+            <state line="60" column="23" selection-start="1539" selection-end="1865" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3402">
               <folding />
             </state>
           </provider>
@@ -93,21 +127,26 @@
       <file leaf-file-name="End.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/im/net/stanza/End.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="16" selection-start="166" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
+            <state line="10" column="32" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/im/net/core/Connection.java">
+      <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="39" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.39407745" vertical-offset="3310" max-vertical-offset="4725">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3809#4601#0" expanded="true" />
-                <element signature="e#4590#4591#0" expanded="true" />
-              </folding>
+            <state line="8" column="8" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ByteHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/im/net/util/ByteHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="17" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5535">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,43 +154,16 @@
       <file leaf-file-name="StanzaListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/im/net/listener/StanzaListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+            <state line="5" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="Ping.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Ping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ByteBuffer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/im/net/core/ByteBuffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.0" vertical-offset="3240" max-vertical-offset="5454">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stanza.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/im/net/core/Stanza.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="3" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1458">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="2376">
+            <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
               <folding />
             </state>
           </provider>
@@ -170,13 +182,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/im/net/core/Parser.java" />
         <option value="$PROJECT_DIR$/src/im/net/core/Stanza.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/im/net/stanza/Message.java" />
-        <option value="$PROJECT_DIR$/src/im/net/stanza/Receipt.java" />
+        <option value="$PROJECT_DIR$/src/im/net/core/ByteBuffer.java" />
         <option value="$PROJECT_DIR$/src/im/net/stanza/End.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/Ping.java" />
+        <option value="$PROJECT_DIR$/src/im/net/util/ByteHelper.java" />
+        <option value="$PROJECT_DIR$/src/im/net/listener/Callback.java" />
         <option value="$PROJECT_DIR$/src/im/net/listener/StanzaListener.java" />
-        <option value="$PROJECT_DIR$/src/im/net/core/Parser.java" />
+        <option value="$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/Receipt.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/Session.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/Message.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/AuthResp.java" />
+        <option value="$PROJECT_DIR$/src/im/net/stanza/Auth.java" />
         <option value="$PROJECT_DIR$/src/IMClient.java" />
         <option value="$PROJECT_DIR$/src/im/net/core/Connection.java" />
       </list>
@@ -216,6 +236,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,6 +287,10 @@
               <option name="myItemId" value="net" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,10 +314,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,6 +369,8 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -556,14 +622,17 @@
       <updated>1427283384603</updated>
       <workItem from="1427283388155" duration="6959000" />
       <workItem from="1427334645174" duration="11966000" />
+      <workItem from="1427440036157" duration="7587000" />
+      <workItem from="1427797127153" duration="2933000" />
+      <workItem from="1427851324316" duration="16464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18925000" />
+    <option name="totallyTimeSpent" value="45909000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -585,12 +654,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22103004" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22103004" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -615,6 +684,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="38" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="1728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/ByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.0" vertical-offset="3483" max-vertical-offset="5454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Receipt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Stanza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="6" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="28" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="3240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IMClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="33" selection-start="2593" selection-end="2790" vertical-scroll-proportion="0.0" vertical-offset="2349" max-vertical-offset="4293">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/End.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="16" selection-start="166" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="39" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0" vertical-offset="3483" max-vertical-offset="4725">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3191#3692#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#5110#5261#0" expanded="true" />
+            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#6883#7956#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#9715#9716#0" expanded="true" />
+            <element signature="e#9756#9757#0" expanded="true" />
+            <element signature="e#9836#9837#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#10025#10026#0" expanded="true" />
+            <element signature="e#10059#10060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/listener/StanzaListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="39" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/ByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.0" vertical-offset="3483" max-vertical-offset="5535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Stanza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="3213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IMClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="0" selection-start="2308" selection-end="2308" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3780">
@@ -634,8 +813,18 @@
         <state line="63" column="42" selection-start="1984" selection-end="1984" vertical-scroll-proportion="0.0" vertical-offset="1701" max-vertical-offset="4185">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3809#4601#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
+            <element signature="e#3191#3692#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#5110#5261#0" expanded="true" />
+            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#6883#7956#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#9715#9716#0" expanded="true" />
+            <element signature="e#9756#9757#0" expanded="true" />
+            <element signature="e#9836#9837#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#10025#10026#0" expanded="true" />
+            <element signature="e#10059#10060#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,146 +871,198 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/listener/Callback.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/io/IOException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
+        <state line="38" column="6" selection-start="528" selection-end="528" vertical-scroll-proportion="0.86946905" vertical-offset="12" max-vertical-offset="2268" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Receipt.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/SocketOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="0" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="463" max-vertical-offset="1161">
-          <folding />
-        </state>
+        <state line="146" column="0" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0" vertical-offset="3036" max-vertical-offset="4509" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/End.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/SocketException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="16" selection-start="166" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
-          <folding />
-        </state>
+        <state line="36" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.3318584" vertical-offset="201" max-vertical-offset="1026" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Ping.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/jre/lib/rt.jar!/sun/net/ConnectionResetException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.27077365" vertical-offset="0" max-vertical-offset="698">
-          <folding />
-        </state>
+        <state line="7" column="52" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/core/Parser.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/Socket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="38" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1620">
+        <state line="527" column="0" selection-start="21516" selection-end="21516" vertical-scroll-proportion="0.0" vertical-offset="13219" max-vertical-offset="44199" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/org/apache/log4j/Category.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.4090909" vertical-offset="405" max-vertical-offset="4050" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/org/apache/log4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="48" selection-start="194" selection-end="194" vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="621" />
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="16" selection-start="9750" selection-end="9750" vertical-scroll-proportion="0.3323782" vertical-offset="5600" max-vertical-offset="18900">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="694" column="29" selection-start="26062" selection-end="26062" vertical-scroll-proportion="0.3328467" vertical-offset="17511" max-vertical-offset="54378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/io/IOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="6" selection-start="528" selection-end="528" vertical-scroll-proportion="0.86946905" vertical-offset="12" max-vertical-offset="2268">
+        <state line="948" column="16" selection-start="37201" selection-end="37201" vertical-scroll-proportion="22.558699" vertical-offset="8648" max-vertical-offset="54378">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/ConnectException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="497" selection-end="497" vertical-scroll-proportion="-0.49336284" vertical-offset="547" max-vertical-offset="999">
+        <state line="35" column="13" selection-start="497" selection-end="497" vertical-scroll-proportion="0.4641834" vertical-offset="0" max-vertical-offset="999">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="2484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/SocketOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="0" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0" vertical-offset="3036" max-vertical-offset="4509">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/SocketException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.3318584" vertical-offset="201" max-vertical-offset="1026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/jre/lib/rt.jar!/sun/net/ConnectionResetException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/listener/StanzaListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="527" column="0" selection-start="21516" selection-end="21516" vertical-scroll-proportion="0.0" vertical-offset="13219" max-vertical-offset="44199">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/core/Stanza.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/im/net/core/ByteBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.0" vertical-offset="3249" max-vertical-offset="5454">
+        <state line="7" column="17" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="972">
+        <state line="7" column="17" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="999">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/ByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Ping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/listener/StanzaListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Receipt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="5" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/End.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="36" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.3318584" vertical-offset="1713" max-vertical-offset="31752">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/listener/ConnectionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="1.1858407" vertical-offset="328" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IMClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="33" selection-start="2593" selection-end="2790" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3726">
+        <state line="60" column="23" selection-start="1539" selection-end="1865" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3402">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/stanza/AuthResp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/core/Stanza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="310" selection-end="310" vertical-scroll-proportion="0.3328467" vertical-offset="231" max-vertical-offset="1458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/listener/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="47" selection-end="47" vertical-scroll-proportion="0.11604585" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/im/net/util/ByteHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5535">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/im/net/core/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="39" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.39407745" vertical-offset="3310" max-vertical-offset="4725">
+        <state line="313" column="0" selection-start="9660" selection-end="9660" vertical-scroll-proportion="6.775" vertical-offset="3573" max-vertical-offset="9072">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3809#4601#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
+            <element signature="e#3191#3692#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#5110#5261#0" expanded="true" />
+            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#6883#7956#0" expanded="true" />
+            <element signature="e#7945#7946#0" expanded="true" />
+            <element signature="e#9715#9716#0" expanded="true" />
+            <element signature="e#9756#9757#0" expanded="true" />
+            <element signature="e#9836#9837#0" expanded="true" />
+            <element signature="e#9896#9897#0" expanded="true" />
+            <element signature="e#10025#10026#0" expanded="true" />
+            <element signature="e#10059#10060#0" expanded="true" />
           </folding>
         </state>
       </provider>

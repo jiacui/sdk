@@ -1,9 +1,6 @@
 package im.net.stanza;
 
-import im.net.core.ByteBuffer;
 import im.net.core.Stanza;
-
-import java.util.List;
 
 /**
  * Created by huangjiacui on 15-3-25.

@@ -5,7 +5,7 @@ import im.net.util.ByteHelper;
 import org.apache.log4j.Logger;
 
 /**
- * Created by koujc on 14-12-7.
+ * Created by hjc on 14-12-7.
  */
 public class Parser {
     private StanzaListener stanzaListener;
@@ -13,7 +13,7 @@ public class Parser {
     private short type;
     private int minStanzaLength = 4;
 
-    private static final Logger log = Logger.getLogger(Connection.class);
+    private static final Logger log = Logger.getLogger(Parser.class);
 
     public Parser(StanzaListener stanzaListener) {
         this.stanzaListener = stanzaListener;
@@ -28,6 +28,10 @@ public class Parser {
             if(this.type == 0) {
                 this.type = ByteHelper.readUInt16(buf, 0, 2);
                 this.minStanzaLength = ByteHelper.readUInt16(buf, 2, 4) + 4;
+
+                if(this.type <= 0) {
+                    break;
+                }
             }
 
             if(this.type > 0) {

@@ -6,7 +6,8 @@ import im.net.core.Stanza;
 import java.util.List;
 
 /**
- * Created by koujc on 14-12-8.
+ * IM 会话
+ * Created by hjc on 14-12-8.
  */
 public class Session extends Stanza{
     private byte step;

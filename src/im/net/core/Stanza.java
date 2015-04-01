@@ -1,7 +1,7 @@
 package im.net.core;
 
 /**
- * Created by koujc on 14-12-7.
+ * Created by hjc on 14-12-7.
  */
 public class Stanza {
     private short type;

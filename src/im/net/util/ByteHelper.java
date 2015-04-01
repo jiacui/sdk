@@ -1,7 +1,7 @@
 package im.net.util;
 
 /**
- * Created by koujc on 14-12-8.
+ * Created by hjc on 14-12-8.
  */
 public class ByteHelper {
     /**

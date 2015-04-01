@@ -6,7 +6,8 @@ import im.net.core.Stanza;
 import java.util.List;
 
 /**
- * Created by koujc on 14-12-8.
+ * 消息
+ * Created by hjc on 14-12-8.
  */
 public class Message extends Stanza{
     private String id;
@@ -39,13 +40,14 @@ public class Message extends Stanza{
 
     public Message(Stanza stanza) {
         List values = new ByteBuffer(stanza.getContent())._string()._int()._int()._int()._byte()._long()._string().unpack();
-        this.id = (String)values.get(0);
-        this.from = (Integer)values.get(1);
-        this.to = (Integer)values.get(2);
-        this.target = (Integer)values.get(3);
-        this.type = (Byte)values.get(4);
-        this.stamp = (Long)values.get(5);
-        this.body = (String)values.get(6);
+        int idx = 0;
+        this.id = (String)values.get(idx++);
+        this.from = (Integer)values.get(idx++);
+        this.to = (Integer)values.get(idx++);
+        this.target = (Integer)values.get(idx++);
+        this.type = (Byte)values.get(idx++);
+        this.stamp = (Long)values.get(idx++);
+        this.body = (String)values.get(idx++);
     }
 
     public String getId() {

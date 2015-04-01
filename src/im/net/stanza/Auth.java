@@ -4,7 +4,8 @@ import im.net.core.ByteBuffer;
 import im.net.core.Stanza;
 
 /**
- * Created by koujc on 14-12-8.
+ * 验证请求
+ * Created by hjc on 14-12-8.
  */
 public class Auth extends Stanza {
     private byte protocolVersion;

@@ -6,6 +6,7 @@ import im.net.core.Stanza;
 import java.util.List;
 
 /**
+ * 消息回执
  * Created by huangjiacui on 15-3-25.
  */
 public class Receipt extends Stanza {

@@ -1,7 +1,11 @@
+import im.net.stanza.Auth;
+import im.net.util.ByteHelper;
 import org.apache.log4j.PropertyConfigurator;
 
+import java.util.Scanner;
+
 /**
- * Created by koujc on 14-12-7.
+ * Created by hjc on 14-12-7.
  */
 public class Main {
     public static void main(String ar[]) {
@@ -16,15 +20,16 @@ public class Main {
 
 //          System.out.println(System.currentTimeMillis());
 
-        int uid = 905579;
+        System.out.println(ByteHelper.bytesToHexString(new Auth((byte) 1, 102, (byte) 1, "1", "golo/3.1", "ios/7.1").toBuffer()));
+
+        int uid = 102;
         String accessToken = "f8bc80013616f4ea2ce5defe7e69252a";
-//        System.out.println(bytesToHexString(new Auth((byte) 1, uid, (byte) 1, accessToken, "im/1.0", "android/4.0").toBuffer()));
-//        System.out.println(bytesToHexString(new Auth((byte) 1, uid, (byte) 1, accessToken, "golo/3.1", "ios/7.1").toBuffer()));
+//        System.out.println((new Auth((byte) 1, uid, (byte) 1, accessToken, "im/1.0", "android/4.0").toBuffer()));
+//        System.out.println((new Auth((byte) 1, uid, (byte) 1, accessToken, "golo/3.1", "ios/7.1").toBuffer()));
 
         IMClient client = IMClient.getInstance();
         client.connect(uid, accessToken);
 
     }
-
 
 }

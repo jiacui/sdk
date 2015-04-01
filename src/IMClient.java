@@ -12,46 +12,18 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by koujc on 14-12-9.
+ * Created by hjc on 14-12-9.
  */
 public class IMClient {
     private static IMClient instance;
     private static Connection connection;
-    private StanzaListener stanzaListener;
-
     private static final Logger log = Logger.getLogger(IMClient.class);
 
     private int uid;
-    private boolean authenticate;
 
     private IMClient(){
-        stanzaListener = new StanzaListener() {
-            @Override
-            public void onStanza(Stanza stanza) {
-                //收到消息
-                if(stanza.is("Message")) {
-                    Message message = new Message(stanza);
-                    log.info("receive msg:" + message.getBody() + " from " + message.getFrom());
-
-                    // send receipt back
-                    IMClient.connection.send(new Receipt(message.getId()));
-
-                    // TO DO
-                }
-
-                if(stanza.is("Conflict")) {
-                    IMClient.disconnect();
-                    log.info("account conflict");
-                }
-
-                if(stanza.is("Ping")) {
-                    log.info("receive pong");
-                }
-            }
-        };
-        connection = new Connection("192.168.81.123", 10111, stanzaListener);
+        connection = new Connection("192.168.81.123", 10111, "golo/5.0");
         connection.setConnectionListener(connectionListener);
-        connection.setStanzaListener(stanzaListener);
     }
 
     public static IMClient getInstance(){
@@ -64,33 +36,35 @@ public class IMClient {
     private ConnectionListener connectionListener = new ConnectionListener(){
 
         @Override
+        public void recvMessage(Message message) {
+            // TO DO handle message
+        }
+
+        @Override
+        public void recvGroupMessage(Message message) {
+            // TO DO handle group message
+        }
+
+        @Override
+        public void recvNotice(Message message) {
+            // TO DO handle notice message
+        }
+
+        @Override
+        public void recvConflict() {
+            // TO DO handle account conflict
+        }
+
+        @Override
         public void connectionSuccessful() {
-            authenticate = true;
 
-            //间隔 5min 的心跳包
-            new Runnable(){
-
-                @Override
-                public void run() {
-                    Timer timer=new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            instance.ping();
-                        }
-                    }, 5 * 60 * 1000, 5 * 60 * 1000);
-                }
-            }.run();
-
+//            System.out.println("输入消息内容:");
 //            new Runnable(){
 //                @Override
 //                public void run() {
-//                    System.out.println("输入消息内容:");
 //                    Scanner sc = new Scanner(System.in);
-////                    while(true) {
-//                        String msg = sc.next();
-//                        instance.sendChatMessage(905579, msg);
-//                    }
+//                    String msg = sc.next();
+//                    instance.sendChatMessage(905579, msg);
 //                }
 //            }.run();
         }
@@ -122,29 +96,33 @@ public class IMClient {
     };
     public void connect(int uid, String accessToken) {
         this.uid = uid;
-        connection.connect(uid, accessToken);
+//        long stamp = 1234567891234L;
+        long stamp = 0;
+        connection.connect(uid, accessToken, stamp);
     }
 
     public boolean sendChatMessage(int to, String msgBody) {
-        if(this.authenticate) {
-            Message message = new Message();
-            message.setFrom(this.uid);
-            message.setTo(to);
-            message.setType(Message.CHAT);
-            message.setStamp(System.currentTimeMillis());
-            message.setBody(msgBody);
-            this.send(message);
-            return true;
-        }
-        return false;
+        Message message = new Message();
+        message.setFrom(this.uid);
+        message.setTo(to);
+        message.setType(Message.CHAT);
+        message.setStamp(0);
+        message.setBody(msgBody);
+        return this.send(message);
     }
 
-    public void send(Message message) {
-        connection.send(message);
+    public boolean sendGroupMessage(int gid, String msgBody) {
+        Message message = new Message();
+        message.setFrom(this.uid);
+        message.setTo(gid);
+        message.setType(Message.GROUP_CHAT);
+        message.setStamp(0);
+        message.setBody(msgBody);
+        return this.send(message);
     }
 
-    public void ping() {
-        connection.send(new Ping());
+    private boolean send(Message message) {
+        return connection.sendMessage(message);
     }
 
     public static void disconnect() {
